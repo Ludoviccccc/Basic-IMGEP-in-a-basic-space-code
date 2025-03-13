@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 sys.path.append("../")
-from compiler import compile_program
+from Simulator8085simCli.compiler import compile_program
 from Simulator8085simCli.execute_ import execute
 from tqdm import tqdm
 import re
@@ -35,8 +35,8 @@ if __name__=="__main__":
     print("Modified program signature \n", Dict["modified_program_signature"])
     print("reward \n", Dict["reward"])
 
-    optimzerV = optim.Adam(V.parameters(),lr = 1e-4)
-    optimizerPi = optim.Adam(pi.parameters(), lr = 1e-4)
+    optimzerV = optim.Adam(V.parameters(),lr = 1e-5)
+    optimizerPi = optim.Adam(pi.parameters(), lr = 1e-5)
     
     start = 0
     if start>0:

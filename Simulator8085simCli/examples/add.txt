@@ -1,0 +1,8 @@
+/8085 program to add A and B values
+06
+72
+78
+06
+ff
+80
+76
